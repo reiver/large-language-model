@@ -90,6 +90,74 @@
 		</dl>
 	</section>
 	<section>
+		<h1>Pre-Training versus Post-Training</h1>
+		<p>
+			Sometimes you will heard people talk about <strong>pre-trained models</strong> versus <strong>post-trained models</strong>, or <a href="pre-training/">pre-training</a> versus <a href="post-training/">post-training></a>
+			—
+			usually in the context of how <abbr title="Large Language Model">LLM</abbr>s are made.
+		</p>
+		<p>
+			These terms don't seem to be used consistently across the industry, but — here is the general idea —
+		</p>
+		<p>
+			The phrase “<em>pre-trained model</em>” usually refers to the “<strong>base model</strong>”.
+			Where the phrase “<em>post-trained model</em>” usually refers to what you get by modifying the “<strong>base model</strong>” in various ways.
+			(Of course, you are probably now wonder, <em>what is a “<u>base model</u>”</em>.)
+		</p>
+		<section>
+			<h1>Pre-Training</h1>
+			<p>
+				An <abbr title="Large Language Model">LLM</abbr> starts of as a large <a href="/artificial-neural-network/">Artificial Neural Network</a>.
+				(One of the things that the word “large” in “large language model” refers to is how <em>large</em> the <strong>Artificial Neural Network</strong> is.)
+			</p>
+			<p>
+				This is an <strong>Artificial Neural Network</strong> that probably hasn't learned anything yet.
+				It weights/parameters may be randomized.
+			</p>
+			<p>
+				An <strong>Artificial Neural Network</strong>, or any other type of <a href="/machine-learning/">Machine Learning</a>, <a href="/artificial-antelligence/">Artificial Intelligence</a>, or <strong>Statistical</strong> model, with random weights/parameters generally isn't useful yet.
+				To make it useful, it needs to be <em>taught</em>.
+				The process of teaching it is usually called <strong>training</strong>.
+			</p>
+			<p>
+				For <abbr title="Large Language Model">LLM</abbr>s, this <strong>pre-training</strong> process tends to be a giant optimization process to get the <abbr title="Large Language Model">LLM</abbr> to predict the next token (i.e., fill in the blank) of things like these:
+			</p>
+			<ul>
+				<li>
+					<em>“The color of the apple is _____”</em>
+				</li>
+				<li>
+					<em>“The capital of Iran is _____”</em>
+				</li>
+				<li>
+					<em>“How much wood could a woodchuck _____”</em>
+				</li>
+				<li>
+					etc.
+				</li>
+			</ul>
+			<p>
+				Most people don't use these types of raw pre-trained models.
+				A raw pre-trained model does not know it is an AI assistant.
+				A raw pre-trained model and does not know how to follow instructions.
+				If you give a raw pre-trained model a prompt such as:
+			</p>
+			<p>
+				🠶 Write a Golang function to reverse a linked list.
+			</p>
+			<p>
+				A raw pre-trained model might not write the source-code.
+				Instead, a raw pre-trained model might, for example, output a list of other homework questions because it thinks you are pasting a computer science syllabus.
+			</p>
+		</section>
+		<section>
+			<h1>Post-Training</h1>
+			<p>
+				
+			</p>
+		</section>
+	</section>
+	<section>
 		<h1>See Also</h1>
 		<ul>
 			<li>
@@ -179,6 +247,14 @@
 		</section>
 		<section>
 			<h1>P</h1>
+			<ul>
+				<li>
+					<a href="post-training/">Post-Training</a>
+				</li>
+				<li>
+					<a href="pre-training/">Pre-Training</a>
+				</li>
+			</ul>
 		</section>
 		<section>
 			<h1>Q</h1>
