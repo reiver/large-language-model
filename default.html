@@ -180,7 +180,199 @@
 				<h1>Supervised Fine-Tuning (<abbr title="Supervised Fine-Tuning">SFT</abbr>)</h1>
 				<p>
 					One type of <strong>post-training</strong> is:
-					<strong>supervised fine-tuning</strong>.
+					<strong>supervised fine-tuning</strong> (<strong><abbr title="supervised fine-tuning"></abbr>SFT</strong>).
+				</p>
+				<p>
+					The <strong>supervised fine-tuning</strong> phase is where a model is transformed into an <strong><abbr title="Artificial Intelligence">AI</abbr> assistant</strong>.
+				</p>
+				<p>
+					With <strong>supervised fine-tuning</strong>, the model is trained on a set of high-quality, curated [Instruction] -> [Response] pairs.
+					For example:
+				</p>
+				<figure>
+					<dl>
+						<dt>
+							instruction
+						</dt>
+						<dd>
+							<p>
+								What can be seen once in a minute, twice in a moment, and never in a thousand years?
+							</p>
+						</dd>
+
+						<dt>
+							response
+						</dt>
+						<dd>
+							<p>
+								The letter 'M'.
+							</p>
+						</dd>
+					</dl>
+				</figure>
+				<figure>
+					<dl>
+						<dt>
+							instruction
+						</dt>
+						<dd>
+							<p>
+								What can be seen once in a minute, twice in a moment, and never in a thousand years?
+							</p>
+						</dd>
+
+						<dt>
+							response
+						</dt>
+						<dd>
+							<p>
+								The letter 'M'.
+							</p>
+						</dd>
+					</dl>
+				</figure>
+				<figure>
+					<dl>
+						<dt>
+							instruction
+						</dt>
+						<dd>
+							<p>
+								Create a Golang program that emulates a simple calculator capable of performing addition, subtraction, multiplication, and division operations. The calculator should:
+								<br />
+								- Accept input from the command line.
+								<br />
+								- Display the result after each operation.
+							</p>
+						</dd>
+
+						<dt>
+							response
+						</dt>
+						<dd>
+							<p style="white-space: pre-wrap;">
+Here's a simple calculator program in Golang that performs addition, subtraction, multiplication, and division operations:
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
+func main() {
+	if len(os.Args) != 4 {
+		fmt.Println("Usage: calc &lt;operand1&gt; &lt;operator&gt; &lt;operand2&gt;")
+		return
+	}
+
+	operand1, err := strconv.ParseFloat(os.Args[1], 64)
+	if err != nil {
+		fmt.Printf("Invalid operand1: %s\n", os.Args[1])
+		return
+	}
+
+	operator := os.Args[2]
+
+	operand2, err := strconv.ParseFloat(os.Args[3], 64)
+	if err != nil {
+		fmt.Printf("Invalid operand2: %s\n", os.Args[3])
+		return
+	}
+
+	var result float64
+
+	switch operator {
+	case "+":
+		result = operand1 + operand2
+	case "-":
+		result = operand1 - operand2
+	case "*":
+		result = operand1 * operand2
+	case "/":
+		if operand2 == 0 {
+			fmt.Println("Error: Division by zero")
+			return
+		}
+		result = operand1 / operand2
+	default:
+		fmt.Printf("Invalid operator: %s\n", operator)
+		return
+	}
+
+	fmt.Printf("Result: %.2f\n", result)
+}
+```
+
+To use this calculator, save the code as `calc.go` and then build it using the following command:
+
+```sh
+$ go build calc.go
+```
+
+This will create an executable named `calc`. You can run the calculator with the following syntax:
+
+```sh
+$ ./calc &lt;operand1&gt; &lt;operator&gt; &lt;operand2&gt;
+```
+
+For example:
+
+```sh
+$ ./calc 10 + 5
+Result: 15.00
+
+$ ./calc 20 * 3
+Result: 60.00
+
+$ ./calc 50 / 2
+Result: 25.00
+
+$ ./calc 100 - 45
+Result: 55.00
+```
+							</p>
+						</dd>
+					</dl>
+				</figure>
+				<figure>
+					<dl>
+						<dt>
+							instruction
+						</dt>
+						<dd>
+							<p>
+								Design a roller coaster with three distinct features, explaining the purpose of each feature and how it contributes to the overall ride experience.
+							</p>
+						</dd>
+
+						<dt>
+							response
+						</dt>
+						<dd>
+							<p>
+								1. The Gravity-Defying Loop: One of the most iconic and thrilling features of our roller coaster is a massive, vertical loop that takes riders upside down as they travel through it at high speeds. This gravity-defying loop creates an intense sensation of weightlessness and disorientation for riders, making them feel like they are defying the laws of physics. As the train enters the loop, riders experience strong positive G-forces pushing them into their seats, followed by brief moments of weightlessness at the top of the loop before being pushed back into their seats again as they exit the loop. This feature contributes to the overall ride experience by providing a heart-pounding moment of adrenaline and excitement that leaves riders wanting more.
+							</p>
+							<p>
+								2. The Airtime Hills: To create a dynamic and varied ride experience, our roller coaster also includes a series of airtime hills – undulating sections of track that cause riders to lift out of their seats briefly as they crest each hill. These hills provide a contrast to the intensity of the gravity-defying loop, offering moments of exhilaration and fun without the extreme forces experienced during the loop. As riders go over these hills, they experience negative G-forces, giving them the sensation of floating or flying momentarily before being pulled back down into their seats. This feature adds variety to the ride experience, ensuring that there's something for everyone to enjoy.
+							</p>
+							<p>
+								3. The High-Speed Launch: Instead of a traditional chain lift hill, our roller coaster utilizes a state-of-the-art launch system that propels riders from 0 to 60 mph in just a few seconds. This high-speed launch provides an instant adrenaline rush and sets the tone for the rest of the ride, letting riders know that they're in for an unforgettable experience. By using this innovative technology, we can create a more seamless and immersive ride experience, eliminating the slow climb up a lift hill and replacing it with a sudden burst of speed that leaves riders breathless and exhilarated. This feature contributes to the overall ride experience by starting things off with a bang, setting the stage for the thrilling elements that follow.
+							</p>
+							<p>
+								In conclusion, our roller coaster combines three distinct features – the gravity-defying loop, airtime hills, and high-speed launch – to create an unforgettable ride experience that offers something for everyone. Each feature serves a specific purpose in contributing to the overall excitement and enjoyment of the ride, ensuring that riders will want to come back for more time and time again.
+							</p>
+						</dd>
+					</dl>
+				</figure>
+				<p>
+					This teaches the model the format of being an assistant (e.g., "When a user asks a question, reply directly and politely").
+				</p>
+				<p>
+					For more information on this, see:
+					<a href="supervised-fine-tuning/">Supervised Fine-Tuning</a>.
 				</p>
 			</section>
 			<section>
@@ -306,6 +498,9 @@
 		</section>
 		<section>
 			<h1>S</h1>
+			<ul>
+				<a href="supervised-fine-tuning/">Supervised Fine-Tuning</a>
+			</ul>
 		</section>
 		<section>
 			<h1>T</h1>
